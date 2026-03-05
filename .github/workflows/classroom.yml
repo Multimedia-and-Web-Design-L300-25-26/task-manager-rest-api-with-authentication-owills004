@@ -16,6 +16,9 @@ jobs:
     - name: Run Backend Tests
       id: run-backend-tests
       uses: classroom-resources/autograding-command-grader@v1
+      env:
+        MONGO_URI: ${{ secrets.MONGO_URI }}
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
       with:
         test-name: Run Backend Tests
         setup-command: ''
