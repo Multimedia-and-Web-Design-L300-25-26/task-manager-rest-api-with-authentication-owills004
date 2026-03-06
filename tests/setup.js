@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import User from "../src/models/User.js";
 
-dotenv.config({ path: ".env" });
+dotenv.config({ path: ".env.test" });
 
 beforeAll(async () => {
     // Basic connection with SRV support
