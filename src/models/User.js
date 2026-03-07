@@ -11,8 +11,32 @@ import mongoose from "mongoose";
 
 
 const userSchema = new mongoose.Schema({
-  // Students implement
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
+  password: {
+    type: String,
+    required: true,
+    minlength: 6
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
+  }
 });
+
+// Instance method to remove sensitive data
+userSchema.methods.withoutPassword = function () {
+  const userObject = this.toObject();
+  delete userObject.password;
+  return userObject;
+};
 
 const User = mongoose.model("User", userSchema);
 

@@ -4,28 +4,27 @@ import app from "../src/app.js";
 let token;
 let taskId;
 
-beforeAll(async () => {
-  // Register
-  await request(app)
-    .post("/api/auth/register")
-    .send({
-      name: "Task User",
-      email: "task@example.com",
-      password: "123456"
-    });
-
-  // Login
-  const res = await request(app)
-    .post("/api/auth/login")
-    .send({
-      email: "task@example.com",
-      password: "123456"
-    });
-
-  token = res.body.token;
-});
-
 describe("Task Routes", () => {
+
+  beforeAll(async () => {
+    // Register
+    await request(app)
+      .post("/api/auth/register")
+      .send({
+        name: "Task User",
+        email: "task@example.com",
+        password: "123456"
+      });
+
+    // Login
+    const logRes = await request(app)
+      .post("/api/auth/login")
+      .send({
+        email: "task@example.com",
+        password: "123456"
+      });
+    token = logRes.body.token;
+  });
 
   it("should not allow access without token", async () => {
     const res = await request(app)

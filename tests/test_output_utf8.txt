@@ -1,0 +1,70 @@
+﻿node.exe : 
+(node:3836) 
+ExperimentalWarning: 
+VM Modules is an 
+experimental feature 
+and might change at 
+any time
+At C:\Program Files\no
+dejs\npx.ps1:29 char:3
++   & $NODE_EXE 
+$NPX_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ((node:3836   
+ ) Exp...nge at an    
+y time:String) []    
+, RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+(Use `node 
+--trace-warnings ...` 
+to show where the 
+warning was created)
+PASS 
+tests/tasks.test.js
+  ΓùÅ Console
+
+    console.log
+      [dotenv@17.3.1] 
+injecting env (2) 
+from .env.test -- 
+tip: ≡ƒ¢á∩╕Å  run 
+anywhere with 
+`dotenvx run -- 
+yourcommand`
+
+      at _log (node_mo
+dules/dotenv/lib/main.
+js:139:11)
+
+PASS 
+tests/auth.test.js
+  ΓùÅ Console
+
+    console.log
+      [dotenv@17.3.1] 
+injecting env (2) 
+from .env.test -- 
+tip: ΓÜÖ∩╕Å  specify 
+custom .env file path 
+with { path: 
+'/custom/path/.env' }
+
+      at _log (node_mo
+dules/dotenv/lib/main.
+js:139:11)
+
+
+Test Suites: 2 
+passed, 2 total
+Tests:       5 
+passed, 5 total
+Snapshots:   0 total
+Time:        7.259 s, 
+estimated 78 s
+Ran all test suites.
